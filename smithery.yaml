@@ -1,0 +1,11 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: FilingLens API key
+        description: Free at https://filinglens.ai. Leave empty to use the shared demo quota.
+  commandFunction: |-
+    (config) => ({ command: "filinglens-mcp", args: [], env: { FL_API_KEY: config.apiKey || "" } })

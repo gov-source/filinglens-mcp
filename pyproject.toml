@@ -1,0 +1,33 @@
+[project]
+name = "filinglens"
+version = "0.1.0"
+description = "Python client + MCP server for FilingLens: exact XBRL financials and cited Q&A over SEC filings."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Govind Singh", email = "hello@filinglens.ai" }]
+keywords = ["sec", "edgar", "10-k", "xbrl", "mcp", "financial-data", "llm", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = ["httpx>=0.27", "mcp>=2.0"]
+
+[project.urls]
+Homepage = "https://filinglens.ai"
+Documentation = "https://api.filinglens.ai/docs"
+Repository = "https://github.com/gov-source/filinglens-mcp"
+
+[project.scripts]
+filinglens-mcp = "filinglens.mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/filinglens"]

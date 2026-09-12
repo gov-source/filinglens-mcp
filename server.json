@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.gov-source/filinglens",
+  "description": "SEC filings intelligence: exact XBRL financials and cited Q&A over 10-K/10-Q filings for AI agents.",
+  "status": "active",
+  "repository": { "url": "https://github.com/gov-source/filinglens-mcp", "source": "github" },
+  "version": "0.1.0",
+  "websiteUrl": "https://filinglens.ai",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "filinglens",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        { "name": "FL_API_KEY", "description": "FilingLens API key (free tier at filinglens.ai). Optional: demo key used if unset.", "isRequired": false, "isSecret": true }
+      ]
+    }
+  ]
+}
